@@ -1,7 +1,16 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "http://localhost/daas",
     title: "Daas-Africa",
   },
-  plugins: ["gatsby-plugin-gatsby-cloud"],
+  plugins: ["gatsby-plugin-gatsby-cloud",
+            {
+              resolve: "gatsby-source-filesystem",
+              options: {
+                name: `blog`,
+                path: `${__dirname}/blog`,
+              }
+            },
+          ],
+
 };
