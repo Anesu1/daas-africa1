@@ -4,6 +4,7 @@ module.exports = {
     title: "Daas-Africa",
   },
   plugins: ["gatsby-plugin-gatsby-cloud",
+
             {
               resolve: "gatsby-source-filesystem",
               options: {
@@ -11,6 +12,13 @@ module.exports = {
                 path: `${__dirname}/blog`,
               }
             },
+            {
+              resolve: "gatsby-plugin-page-creator",
+              options: {
+                path: `${__dirname}/posts`,
+              },
+            },
+            "gatsby-plugin-mdx",
           ],
 
 };
